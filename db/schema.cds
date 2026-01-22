@@ -23,14 +23,12 @@ entity ZMerchant_Training{
 entity ZOutput_Training{
     key POSUniqueID: String(20);
     key MerchantUniqueID: String(20);
-    key MerchantID: String(10);
-    key TerminalID:String(10);
-    PDate: Date;
     PAmount: Decimal(13,2);
-    MDate: Date;
     MAmount: Decimal(13,2);
-    Status: Boolean;
-
+    NoVariance: Boolean;
+    Variance: Decimal(13,2);
+    Confidence: Decimal(5,2);
+    ManualReview: Boolean;
 }
 
 entity ZRecon_AI{
